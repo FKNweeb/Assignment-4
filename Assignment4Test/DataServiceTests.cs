@@ -104,10 +104,9 @@ public class DataServiceTests
         var service = new DataService();
         var product = service.GetProduct(1);
         Assert.Equal("Chai", product.Name);
-        Assert.Equal("Beverages", product.Category.Name);
+        Assert.Equal("Beverages", product.CategoryName);
     }
 
-/*
     [Fact]
     public void GetProductsByCategory_ValidId_ReturnsProductWithCategory()
     {
@@ -119,6 +118,7 @@ public class DataServiceTests
         Assert.Equal("Lakkalikööri", products.Last().Name);
     }
 
+
     [Fact]
     public void GetProduct_NameSubString_ReturnsProductsThatMatchesTheSubString()
     {
@@ -129,9 +129,8 @@ public class DataServiceTests
         Assert.Equal("Confections", products.First().CategoryName);
         Assert.Equal("Flotemysost", products.Last().ProductName);
     }
-*/
+
     /* orders */
-/*
     [Fact]
     public void Order_Object_HasIdDatesAndOrderDetails()
     {
@@ -162,9 +161,7 @@ public class DataServiceTests
         Assert.Equal(830, orders.Count);
     }
 
-*/
     /* order details */
-/*
     [Fact]
     public void OrderDetails_Object_HasOrderProductUnitPriceQuantityAndDiscount()
     {
@@ -200,5 +197,4 @@ public class DataServiceTests
         Assert.Equal(14, orderDetails.First().UnitPrice);
         Assert.Equal(12, orderDetails.First().Quantity);
     }
-*/
 }

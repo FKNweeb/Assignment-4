@@ -9,4 +9,5 @@ public class Product
     public string QuantityPerUnit { get; set; }
     public int UnitsInStock { get; set; }
     public Category Category { get; set; }
+    public string CategoryName { get => Category?.Name ?? ""; }
 }
